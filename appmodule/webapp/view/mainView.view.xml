@@ -1,0 +1,65 @@
+<mvc:View
+    controllerName="com.raunak.appmodule.controller.mainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="productsTable"
+                mode="MultiSelect"
+                items="{productsModel>/}"
+                updateFinished="onUpdateFinished"
+            >
+                <columns>
+                    <Column>
+                        <Text text="ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Brand" />
+                    </Column>
+                    <Column>
+                        <Text text="Category" />
+                    </Column>
+                    <Column>
+                        <Text text="Description" />
+                    </Column>
+                    <Column>
+                        <Text text="Discount Percentage" />
+                    </Column>
+                    <Column>
+                        <Text text="Price" />
+                    </Column>
+                    <Column>
+                        <Text text="Rating" />
+                    </Column>
+                    <Column>
+                        <Text text="Stock" />
+                    </Column>
+                    <Column>
+                        <Text text="Title" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle">
+                        <cells>
+                            <Text text="{productsModel>id}" />
+                            <Text text="{productsModel>brand}" />
+                            <Text text="{productsModel>category}" />
+                            <Text text="{productsModel>description}" />
+                            <Text text="{productsModel>discountPercentage}" />
+                            <Text text="{productsModel>price}" />
+                            <Text text="{productsModel>rating}" />
+                            <Text text="{productsModel>stock}" />
+                            <Text text="{productsModel>title}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
